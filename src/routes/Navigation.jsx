@@ -6,6 +6,10 @@ import ClientsTable from '../pages/ClientsTable'
 
 
 const Navigation = () => {
+  
+
+
+
   return (
     <Routes>
         <Route path='/' element={<Home/>}/>
