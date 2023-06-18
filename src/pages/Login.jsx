@@ -29,12 +29,16 @@ const Login = () => {
 
   return (
     <div className='login-container'>
-      <form onSubmit={handleSubmit}>
-        <label>Usuario</label>
-        <InputText name='username' value={employeeCredentials.username} onChange={changeValueForm} />
-        <label>contraseña</label>
-        <Password name='password' value={employeeCredentials.password} onChange={changeValueForm} toggleMask feedback={false}/>
-        <Button value={employeeCredentials.username} label='Entrar' type='submit' />
+      <form className='form-container' onSubmit={handleSubmit}>
+        <div className='user-container'>
+        <label className='user-label'>Usuario</label>
+        <InputText className='user-input' name='username' value={employeeCredentials.username} onChange={changeValueForm} />
+        </div>
+        <div className='password-container'>
+        <label className='password-label'>Contraseña</label>
+        <Password className='password-input' name='password' value={employeeCredentials.password} onChange={changeValueForm} toggleMask feedback={false}/>
+        </div>
+        <Button className='btn-submit' value={employeeCredentials.username} label='Entrar' type='submit'  severity="success"/>
       </form>
         
     </div>
